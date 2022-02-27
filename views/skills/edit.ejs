@@ -1,0 +1,8 @@
+<body>
+  <h2>Edit</h2>
+  <form action="/skills/<%= skill._id %>?_method=PUT" method="POST" autocomplete="off">
+    <input type="text" value="<%= skill.text %> " name="text">
+    <input type="text" value="<%= skill._id %> " name="id">
+    <button type="submit">Save edit</button>
+  </form>
+</body>

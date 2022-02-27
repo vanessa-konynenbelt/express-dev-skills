@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Express Skills</title>
+</head>
+  <body>
+    <% if(error) { %>
+      <h2><%= error %></h2>
+    <% } else { %>
+      <h2><%= skill.text %></h2>
+      <h4>Skill #<%= skill._id %></h4> 
+    <% } %>
+    <form 
+      action="/skills/<%= skill._id %>?_method=DELETE"
+      class="delete-form"
+      method="POST"
+    >
+    <button type="submit">delete</button>
+    </form>
+    <a href="/skills/<%= skill._id %>/edit/"><button type="submit">edit</button></a>
+    <br>
+    <a href="/skills">Go back</a>
+  </body>
+</html>
